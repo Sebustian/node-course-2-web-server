@@ -40,7 +40,7 @@ app.get('/',(req,res)=>{
 
 
 res.render('home.hbs',{
-  pageTitle:'About page',
+  pageTitle:'Home page',
   welcomeText: 'Hallo dmitri',
   currentYear: new Date().getFullYear()
 
@@ -53,6 +53,11 @@ app.get('/about',(req,res)=>{
     currentYear: new Date().getFullYear()
 
 });
+});
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs', {
+    pageTitle:'Project page'
+  });
 });
 
 app.get('/bad',(req,res)=>{
